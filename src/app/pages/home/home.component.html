@@ -1,4 +1,16 @@
-<section class="container container_padding" style="border: 1px solid black;">
-    <p>home works!</p>
+<section class="container container_padding">
+    <h2>Produtos</h2>
+
+    <!-- criar um carrousel de imagens aqui -->
+
+    <ul class="products">
+        @for(prod of prodArray; track $index) {
+
+            <li>
+                <!-- criar card component -->
+                <span>{{prod.product}}</span>
+            </li>
+        }
+    </ul>
 
 </section>
