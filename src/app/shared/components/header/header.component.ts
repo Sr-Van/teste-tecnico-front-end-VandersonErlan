@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  private route = inject(Router);
+
+  goToRoute(route: string) {
+    this.route.navigate([route]);
+  }
 }
