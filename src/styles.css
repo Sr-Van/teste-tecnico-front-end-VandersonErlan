@@ -31,3 +31,37 @@
     box-sizing: border-box;
     font-family: var(--font-family-base);
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 270px;
+    transition: all 350ms ease-in-out;
+}
+
+.container_padding {
+    padding-top: calc(5vh + 5%);
+}
+
+@media(width >= 425px) {
+    .container {
+        max-width: 320px;
+    }
+}
+
+@media(width >= 768px) {
+    .container {
+        max-width: 650px;
+    }
+}
+
+@media(width >= 1024px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media(width >= 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+}
