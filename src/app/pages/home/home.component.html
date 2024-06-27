@@ -1,16 +1,33 @@
-<section class="container container_padding">
-    <h2>Produtos</h2>
+@if(!utS$.isLoading()) {
+    <section class="container container_padding">
+        <h2>Produtos</h2>
+    
+        <!-- criar um carrousel de imagens aqui -->
+        <div class="filters">
+            <div class="filter_search">
+                <input type="text" placeholder="Pesquisar...">
+                <i class='bx bx-search-alt'></i>
+            </div>
 
-    <!-- criar um carrousel de imagens aqui -->
-
-    <ul class="products">
-        @for(prod of prodArray; track $index) {
-
-            <li>
-                <!-- criar card component -->
-                <span>{{prod.product}}</span>
-            </li>
-        }
-    </ul>
-
-</section>
+            <div class="filter_sort">
+                <select [value]="selectValue" (change)="handleSelectChange($event)">
+                    <option value="0">Padrão</option>
+                    <option value="1">Menor preço</option>
+                    <option value="2">Maior preço</option>
+                </select>
+            </div>
+        </div>
+        <ul class="products">
+            @for(prod of filteredProdArray; track $index) {
+    
+                <li>
+                    <!-- criar card component -->
+                    <span>{{prod.product}}</span>
+                    <br>
+                    <span>preço: {{prod.price}}</span>
+                </li>
+            }
+        </ul>
+    
+    </section>
+}

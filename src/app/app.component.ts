@@ -21,7 +21,6 @@ export class AppComponent {
   public utS$ = inject(UtilService)
 
   constructor() {
-    this.utS$.runLoading();
   }
 
 }
