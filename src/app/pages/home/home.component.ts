@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 
 import { ProductsService } from '../../shared/services/products.service';
 import { Product } from '../../shared/types/types';
@@ -55,13 +55,30 @@ export class HomeComponent {
     }
   }
 
+  public handleSearchButton(search: string): void {
+    if(search.length === 0) return
+    this.filterBySearch(search)
+  }
+
+  public handleSearchKey(event: KeyboardEvent, search: string): void {
+    if(event.key === 'Enter') {
+      this.handleSearchButton(search)
+    }
+  }
+
+  private filterBySearch(searchValue: string): void {
+    this.utS$.runLoading();
+    this.filteredProdArray = this.prodArray.filter((prod) => prod.product.toLowerCase().includes(searchValue.toLowerCase()))
+    this.selectValue = 0;
+  }
+
   private sortByPriceMax(): void {
     this.utS$.runLoading();
-    this.filteredProdArray = this.prodArray.sort((a, b) => b.price - a.price)
+    this.filteredProdArray = this.filteredProdArray.sort((a, b) => b.price - a.price)
   }
 
   private sortByPriceMin(): void {
     this.utS$.runLoading();
-    this.filteredProdArray = this.prodArray.sort((a, b) => a.price - b.price)
+    this.filteredProdArray = this.filteredProdArray.sort((a, b) => a.price - b.price)
   }
 }

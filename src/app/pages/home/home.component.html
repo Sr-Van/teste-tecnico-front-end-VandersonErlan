@@ -5,8 +5,9 @@
         <!-- criar um carrousel de imagens aqui -->
         <div class="filters">
             <div class="filter_search">
-                <input type="text" placeholder="Pesquisar...">
-                <i class='bx bx-search-alt'></i>
+                <input type="text" placeholder="Pesquisar..." #search 
+                (keyup)="handleSearchKey($event, search.value)">
+                <i class='bx bx-search-alt' (click)="handleSearchButton(search.value)"></i>
             </div>
 
             <div class="filter_sort">

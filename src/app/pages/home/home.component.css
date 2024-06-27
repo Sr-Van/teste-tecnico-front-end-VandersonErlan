@@ -19,6 +19,10 @@ h2, .filters {
     gap: 10px;
 }
 
+.filters .filter_search i {
+    cursor: pointer;
+}
+
 .filters .filter_sort {
     width: 100%;
     display: flex;
