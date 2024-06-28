@@ -1,13 +1,15 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { ProductsService } from '../../shared/services/products.service';
 import { Product } from '../../shared/types/types';
 import { UtilService } from '../../shared/services/util.service';
 
+import { HomeCardComponent } from '../../shared/components/home-card/home-card.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [HomeCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

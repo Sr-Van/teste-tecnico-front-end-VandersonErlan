@@ -1,0 +1,19 @@
+<article class="card">
+    <h2>{{ product.product }}</h2>
+    <div class="card-img">
+        <img src="" [alt]="product.product">
+    </div>
+    <div class="card-info">
+        <span>{{ product.brand }}</span>
+        <p>{{ product.price | currency: 'BRL' }}</p>
+    </div>
+
+    <footer>
+        <button>
+            <i class="bx bx-cart-add"></i>
+        </button>
+        <button>
+            <i class="bx bx-heart"></i>
+        </button>
+    </footer>
+</article>
