@@ -20,11 +20,13 @@ export class CartService {
   }
 
   public setCart(): void {
-    this.document.defaultView.localStorage.setItem('cart', JSON.stringify(this.cartArray));
+    this.filterCart();
+    this.document.defaultView.localStorage?.setItem('cart', JSON.stringify(this.cartArray));
   }
 
   public getCart(): void {
     this.cartArray = JSON.parse(this.document?.defaultView?.localStorage?.getItem('cart') || '[]');
+    this.setCart();
   }
 
   public getCartLength(): void {
@@ -37,6 +39,7 @@ export class CartService {
   }
 
   public addItemToCart(product: Product): void {
+    product.quantity = 1;
     this.cartArray.push(product);
     this.setCart();
     this.setCartTotal();
@@ -46,6 +49,26 @@ export class CartService {
     this.cartArray = this.cartArray.filter((prod) => prod.id !== id);
     this.setCart();
     this.setCartTotal();
+  }
+
+  private filterCart(): void {
+    //filtrando para que caso o usuario clique mais de uma vez para adicionar o item, ele acumule na quantidade e não fique repetindo
+    let arr = []
+
+    this.cartArray.forEach((prod) => {
+      if(arr.some((item) => item.id === prod.id)) {
+        arr = arr.map((item) => {
+          if(item.id === prod.id) {
+            item.quantity += prod.quantity
+          }
+          return item
+        })
+      } else {
+        arr.push(prod)
+      }
+    })
+    this.cartArray = arr
+
   }
 
 }
