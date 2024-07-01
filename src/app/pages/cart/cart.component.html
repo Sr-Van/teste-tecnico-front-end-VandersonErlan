@@ -1,3 +1,13 @@
 <section class="container container_padding">
-    <p>cart works!</p>
+    <h1>Carrinho</h1>
+    <ul>
+        @for(item of cart$.cartArray; track $index) {
+
+            <li>
+                <!-- criar card component -->
+                <c-card
+                [product]="item"></c-card>
+            </li>
+        }
+    </ul>
 </section>
