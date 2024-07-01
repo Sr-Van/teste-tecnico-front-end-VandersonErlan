@@ -58,11 +58,15 @@ section > div .buttons a {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    
+
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     flex: 1 1 0;
+}
+
+section > div .buttons a:hover {
+    background-color: var(--color-primary-hover);
 }
 
 section > div button {

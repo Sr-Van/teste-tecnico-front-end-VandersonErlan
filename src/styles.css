@@ -42,7 +42,7 @@
 }
 
 .container_padding {
-    padding-top: calc(5vh + 5%);
+    padding-top: calc(5vh + 15%);
 }
 
 @media(width >= 425px) {
@@ -53,18 +53,26 @@
 
 @media(width >= 768px) {
     .container {
-        max-width: 650px;
+        max-width: 515px;
+    }
+
+    .container_padding {
+        padding-top: calc(5vh + 10%);
     }
 }
 
 @media(width >= 1024px) {
     .container {
-        max-width: 900px;
+        max-width: 780px;
+    }
+
+    .container_padding {
+        padding-top: calc(5vh + 5%);
     }
 }
 
 @media(width >= 1440px) {
     .container {
-        max-width: 1200px;
+        max-width: 1310px;
     }
 }

@@ -40,6 +40,8 @@
 
 .card .card-info span {
     font-weight: 800;
+    color: var(--color-secondary);
+
 }
 
 .card footer {
