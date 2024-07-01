@@ -5,11 +5,12 @@ import { Product } from '../../shared/types/types';
 import { UtilService } from '../../shared/services/util.service';
 
 import { HomeCardComponent } from '../../shared/components/home-card/home-card.component';
+import { CartDriveComponent } from '../../shared/components/cart-drive/cart-drive.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HomeCardComponent],
+  imports: [HomeCardComponent, CartDriveComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -6,6 +6,7 @@ import { Injectable, signal } from '@angular/core';
 export class UtilService {
 
   public isLoading = signal<boolean>(false);
+  public showDriver = signal<boolean>(false);
 
   constructor() { }
 
@@ -18,5 +19,9 @@ export class UtilService {
 
   private setIsLoading(isLoading: boolean): void {
     this.isLoading.set(isLoading);
+  }
+
+  public runDriver(): void {
+    this.showDriver.update(bool => !bool);
   }
 }
