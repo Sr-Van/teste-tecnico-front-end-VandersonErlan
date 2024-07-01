@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 
 import { ProductsService } from '../../shared/services/products.service';
 import { Product } from '../../shared/types/types';
@@ -22,9 +22,20 @@ export class HomeComponent {
   public prodArray: Product[] = [];
   public filteredProdArray: Product[] = [];
   public selectValue: number = 0;
+  public showDriver: boolean = false;
 
   constructor() {
     this.getProds();
+    effect(() => {
+
+      if(!this.utS$.showDriver()) {
+        setTimeout(() => {
+          this.showDriver = this.utS$.showDriver();
+        }, 200);
+      } else {
+        this.showDriver = this.utS$.showDriver();
+      }
+    })
   }
 
   private getProds(): void {
@@ -35,7 +46,6 @@ export class HomeComponent {
           this.filteredProdArray = this.prodArray
         },
         error: (err) => {
-          console.log(err)
         }
       }
     )

@@ -3,6 +3,7 @@ import { CurrencyPipe } from '@angular/common';
 
 import { Product } from '../../types/types';
 import { CartService } from '../../services/cart.service';
+import { UtilService } from '../../services/util.service';
 
 @Component({
   selector: 'Homecard',
@@ -14,6 +15,7 @@ import { CartService } from '../../services/cart.service';
 export class HomeCardComponent {
 
   private cart$ = inject(CartService);
+  private utS$ = inject(UtilService);
 
   @Input() product: Product;
 
@@ -21,5 +23,7 @@ export class HomeCardComponent {
     this.cart$.addItemToCart(product);
     this.cart$.setCart();
     this.cart$.getCartLength();
+
+    this.utS$.runDriver();
   }
 }

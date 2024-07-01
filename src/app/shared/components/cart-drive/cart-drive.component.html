@@ -1,6 +1,11 @@
 @if(show) {
-    <section class="container container_padding" [@enterAnim]>
-        <h1>Carrinho</h1>
-        <span>va para o carrinho</span>
+    <section [@enterAnim]>
+        <div class="container">
+            <h1>Carrinho</h1>
+            <span>va para o carrinho</span>
+            <button (click)="close()">
+                <i class="bx bx-x"></i>
+            </button>
+        </div>
     </section>
 }
