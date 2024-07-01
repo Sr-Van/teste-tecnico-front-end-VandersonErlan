@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 
 import { Product } from '../../types/types';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'Homecard',
@@ -12,5 +13,13 @@ import { Product } from '../../types/types';
 })
 export class HomeCardComponent {
 
-  @Input() product: Product
+  private cart$ = inject(CartService);
+
+  @Input() product: Product;
+
+  public addItemToCart(product: Product): void {
+    this.cart$.addItemToCart(product);
+    this.cart$.setCart();
+    this.cart$.getCartLength();
+  }
 }

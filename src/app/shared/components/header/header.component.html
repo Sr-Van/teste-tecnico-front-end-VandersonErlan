@@ -7,7 +7,9 @@
 
     <nav>
         <div class="cart">
-            <span class="counter">0</span>
+            <span class="counter">
+                {{ cart$.cartLen() }}
+            </span>
             <a (click)="goToRoute('cart')">
                 <i class='bx bxs-cart-alt'></i>
             </a>

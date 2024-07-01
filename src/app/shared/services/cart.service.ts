@@ -11,15 +11,25 @@ export class CartService {
 
   public cartArray: Product[] = [];
   public cartTotal = signal<number>(0);
+  public cartLen = signal<number>(0);
 
-  constructor() { }
+  constructor() {
+    this.getCart();
+    this.getCartLength();
+    this.setCartTotal();
+  }
 
   public setCart(): void {
     this.document.defaultView.localStorage.setItem('cart', JSON.stringify(this.cartArray));
   }
 
-  public getCart(): string {
-    return this.document.defaultView.localStorage.getItem('cart');
+  public getCart(): void {
+    this.cartArray = JSON.parse(this.document?.defaultView?.localStorage?.getItem('cart') || '[]');
+  }
+
+  public getCartLength(): void {
+    const uniq = [...new Set(this.cartArray.map((prod) => prod.id))];
+    this.cartLen.set(uniq.length);
   }
 
   public setCartTotal(): void {
