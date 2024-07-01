@@ -1,8 +1,23 @@
 @if(show) {
     <section [@enterAnim]>
         <div class="container">
-            <h1>Carrinho</h1>
-            <span>va para o carrinho</span>
+            <span class="item_added">
+                <h1>{{ item.product }} adicionado ao carrinho!</h1>
+                <p>
+                    Veja mais itens parecidos com esse e ganha desconto.
+                </p>
+            </span>
+            <div class="buttons">
+                <a
+                    routerLink="/cart"
+                    (click)="close()">Vá para o carrinho
+                    <i class="bx bxs-cart-alt"></i>
+                </a>
+                <a
+                    (click)="close()">Continue comprando
+                    <i class="bx bx-undo"></i>
+                </a>
+            </div>
             <button (click)="close()">
                 <i class="bx bx-x"></i>
             </button>

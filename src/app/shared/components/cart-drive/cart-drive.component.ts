@@ -1,11 +1,14 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, effect, inject } from '@angular/core';
 import { UtilService } from '../../services/util.service';
+import { Product } from '../../types/types';
+import { CartService } from '../../services/cart.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'c-driver',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './cart-drive.component.html',
   styleUrl: './cart-drive.component.css',
   animations: [
@@ -25,12 +28,17 @@ import { UtilService } from '../../services/util.service';
 export class CartDriveComponent {
 
   public utS$ = inject(UtilService);
+  private cart$ = inject(CartService);
 
   public show: boolean = false;
+  public item: Product;
 
   constructor() {
     effect(() => {
       this.show = this.utS$.showDriver();
+      if(this.show) {
+        this.item = this.cart$.lastItemAdded();
+      }
     })
   }
 

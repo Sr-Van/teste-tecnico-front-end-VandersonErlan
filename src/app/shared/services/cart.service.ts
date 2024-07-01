@@ -12,6 +12,7 @@ export class CartService {
   public cartArray: Product[] = [];
   public cartTotal = signal<number>(0);
   public cartLen = signal<number>(0);
+  public lastItemAdded = signal<Product>({} as Product);
 
   constructor() {
     this.getCart();
@@ -43,6 +44,7 @@ export class CartService {
     this.cartArray.push(product);
     this.setCart();
     this.setCartTotal();
+    this.lastItemAdded.set(product);
   }
 
   public removeItemFromCart(id: number): void {
