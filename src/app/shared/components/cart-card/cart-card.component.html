@@ -1,8 +1,18 @@
 <article>
     <h2>{{ product.product }}</h2>
-    <span>{{ product.quantity }}</span>
-    <button>
-        <span>delete</span>
-        <i class="bx bx-heart"></i>
+    <p>{{ product.price | currency: 'BRL' }} (1un)</p>
+    <div class="quantity">
+        <button><i class="bx bx-minus"></i></button>
+        <span>{{ product.quantity }}</span>
+        <button><i class="bx bx-plus"></i></button>
+    </div>
+    <button (click)="removeItem(product.id)">
+        <span>Remover item</span>
+        <i class="bx bx-x"></i>
     </button>
+
+    <span class="total">
+        <p>Subtotal: </p>
+        <p>{{ calcTotal(product.price, product.quantity) | currency: 'BRL' }}</p>    
+    </span>
 </article>

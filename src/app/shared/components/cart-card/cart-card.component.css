@@ -1,0 +1,77 @@
+article {
+    display: grid;
+    grid-template-areas: 
+    "head head"
+    "lsubhead rsubhead"
+    "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--color-white);
+    gap: 10px;
+
+    max-width: 500px;
+    border-bottom: 1px solid var(--color-grey);
+    padding: 10px;
+}
+
+article h2 {
+    grid-area: head;
+}
+
+article p {
+    grid-area: lsubhead;
+
+    font-size: var(--font-size-xsmall);
+    color: var(--color-grey);
+}
+
+article .total {
+    grid-area: rsubhead;
+
+    display: flex;
+    gap: 4px;
+}
+
+article .quantity {
+    grid-area: left;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    font-size: var(--font-size-xsmall);
+}
+
+article .quantity button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: grid;
+    place-items: center;
+    color: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+
+article .quantity button:nth-child(1) {
+    background-color: var(--color-salmon);
+}
+
+article .quantity button:nth-child(3) {
+    background-color: var(--color-secondary);
+}
+
+article button {
+    grid-area: right;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    color: var(--color-salmon);
+
+    display: flex;
+    align-items: center;
+}

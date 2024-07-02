@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section ul {
+    list-style: none;
+}
+
+@media(width >= 1024px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    section h1 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
