@@ -23,4 +23,12 @@ export class CartCardComponent {
     return price * quantity;
   }
 
+  public handleIncrease(): void {
+    this.cart$.increaseQuantity(this.product.id);
+  }
+
+  public handleDecrease(): void {
+    this.cart$.decreaseQuantity(this.product.id);
+  }
+
 }

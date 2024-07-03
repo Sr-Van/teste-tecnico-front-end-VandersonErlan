@@ -53,6 +53,28 @@ export class CartService {
     this.setCartTotal();
   }
 
+  public increaseQuantity(id: number): void {
+    const index = this.cartArray.map((prod) => prod.id).indexOf(id);
+    if(index === -1 ) {
+      return
+    }
+
+    this.cartArray[index].quantity++;
+    this.setCart();
+    this.setCartTotal();
+  }
+
+  public decreaseQuantity(id: number): void {
+    const index = this.cartArray.map((prod) => prod.id).indexOf(id);
+    if(index === -1 ) {
+      return
+    }
+
+    this.cartArray[index].quantity--;
+    this.setCart();
+    this.setCartTotal();
+  }
+
   private filterCart(): void {
     //filtrando para que caso o usuario clique mais de uma vez para adicionar o item, ele acumule na quantidade e não fique repetindo
     let arr = []

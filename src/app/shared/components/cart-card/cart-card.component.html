@@ -2,9 +2,9 @@
     <h2>{{ product.product }}</h2>
     <p>{{ product.price | currency: 'BRL' }} (1un)</p>
     <div class="quantity">
-        <button><i class="bx bx-minus"></i></button>
+        <button (click)="handleDecrease()"><i class="bx bx-minus"></i></button>
         <span>{{ product.quantity }}</span>
-        <button><i class="bx bx-plus"></i></button>
+        <button (click)="handleIncrease()"><i class="bx bx-plus"></i></button>
     </div>
     <button (click)="removeItem(product.id)">
         <span>Remover item</span>
