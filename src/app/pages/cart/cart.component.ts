@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { CartService } from '../../shared/services/cart.service';
 
 import { CartCardComponent } from '../../shared/components/cart-card/cart-card.component';
+import { UtilService } from '../../shared/services/util.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,5 +15,10 @@ import { CartCardComponent } from '../../shared/components/cart-card/cart-card.c
 export class CartComponent {
 
   public cart$ = inject(CartService)
+  public utS$ = inject(UtilService);
+
+  constructor() {
+    this.utS$.runLoading();
+  }
 
 }

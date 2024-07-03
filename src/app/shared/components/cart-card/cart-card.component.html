@@ -1,18 +1,25 @@
-<article>
-    <h2>{{ product.product }}</h2>
-    <p>{{ product.price | currency: 'BRL' }} (1un)</p>
-    <div class="quantity">
-        <button (click)="handleDecrease()"><i class="bx bx-minus"></i></button>
-        <span>{{ product.quantity }}</span>
-        <button (click)="handleIncrease()"><i class="bx bx-plus"></i></button>
-    </div>
-    <button (click)="removeItem(product.id)">
-        <span>Remover item</span>
-        <i class="bx bx-x"></i>
-    </button>
+@if(!utS$.isLoading()) {
 
-    <span class="total">
-        <p>Subtotal: </p>
-        <p>{{ calcTotal(product.price, product.quantity) | currency: 'BRL' }}</p>    
-    </span>
-</article>
+    <article>
+        <h2>{{ product.product }}</h2>
+        <p>{{ product.price | currency: 'BRL' }} (1un)</p>
+        <div class="quantity">
+            <button 
+            (click)="handleDecrease()" 
+            [disabled]="product?.quantity <= 1"><i class="bx bx-minus"></i></button>
+            <span>{{ product?.quantity }}</span>
+            <button 
+            (click)="handleIncrease()" 
+            [disabled]="product?.quantity >= baseProduct?.quantity"><i class="bx bx-plus"></i></button>
+        </div>
+        <button (click)="removeItem(product.id)">
+            <span>Remover item</span>
+            <i class="bx bx-x"></i>
+        </button>
+    
+        <span class="total">
+            <p>Subtotal: </p>
+            <p>{{ calcTotal(product.price, product.quantity) | currency: 'BRL' }}</p>    
+        </span>
+    </article>
+}

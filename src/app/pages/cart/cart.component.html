@@ -1,28 +1,31 @@
-<section class="container container_padding">
-    <h1>Carrinho</h1>
-    <ul>
-        @for(item of cart$.cartArray; track $index) {
-
+@if(!utS$.isLoading()) {
+    <section class="container container_padding">
+        <h1>Carrinho</h1>
+        <ul>
+            @for(item of cart$.cartArray; track $index) {
+    
+                <li>
+                    <!-- criar card component -->
+                    <c-card
+                    [product]="item"></c-card>
+                </li>
+            }
+        </ul>
+    
+        <ul class="resume">
             <li>
-                <!-- criar card component -->
-                <c-card
-                [product]="item"></c-card>
+                <span>Subtotal</span>
+                <span>300</span>
             </li>
-        }
-    </ul>
-
-    <ul class="resume">
-        <li>
-            <span>Subtotal</span>
-            <span>300</span>
-        </li>
-        <li>
-            <span>Desconto</span>
-            <span>0</span>
-        </li>
-        <li>
-            <span>Total</span>
-            <span>300</span>
-        </li>
-    </ul>
-</section>
+            <li>
+                <span>Desconto</span>
+                <span>0</span>
+            </li>
+            <li>
+                <span>Total</span>
+                <span>300</span>
+            </li>
+        </ul>
+    </section>
+    
+}
