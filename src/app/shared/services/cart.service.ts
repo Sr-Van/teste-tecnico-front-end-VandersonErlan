@@ -36,7 +36,7 @@ export class CartService {
   }
 
   public setCartTotal(): void {
-    this.cartTotal.set(this.cartArray.reduce((acc, curr) => acc + curr.price, 0));
+    this.cartTotal.set(this.cartArray.reduce((acc, curr) => acc + curr.price * curr.quantity, 0));
   }
 
   public addItemToCart(product: Product): void {

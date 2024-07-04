@@ -12,18 +12,20 @@
             }
         </ul>
     
-        <ul class="resume">
+        <ul class="resume" [hidden]="cart$.cartArray.length === 0">
             <li>
-                <span>Subtotal</span>
-                <span>300</span>
+                <h2>Resumo</h2>
             </li>
-            <li>
-                <span>Desconto</span>
-                <span>0</span>
-            </li>
-            <li>
-                <span>Total</span>
-                <span>300</span>
+            @for (item of cart$.cartArray; track $index) {
+                <li class="resume-item">
+                    <b>{{ item.product }}</b>
+                    <i>Quantidade: {{ item.quantity }}</i>
+                    <i>{{ item.price | currency: 'BRL' }}</i>
+                </li>
+            }
+            <li class="resume-total">
+                <h4>Total</h4>
+                <p>{{ cart$.cartTotal() | currency: 'BRL' }}</p>
             </li>
         </ul>
     </section>

@@ -4,11 +4,12 @@ import { CartService } from '../../shared/services/cart.service';
 
 import { CartCardComponent } from '../../shared/components/cart-card/cart-card.component';
 import { UtilService } from '../../shared/services/util.service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CartCardComponent],
+  imports: [CartCardComponent, CurrencyPipe],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
