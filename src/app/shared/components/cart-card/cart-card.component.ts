@@ -32,6 +32,7 @@ export class CartCardComponent {
 
   public removeItem(id: number): void {
     this.cart$.removeItemFromCart(id);
+    this.cart$.getCartLength();
   }
 
   public calcTotal(price: number, quantity: number): number {

@@ -27,7 +27,12 @@
                 <h4>Total</h4>
                 <p>{{ cart$.cartTotal() | currency: 'BRL' }}</p>
             </li>
+            <li>
+                <button (click)="startConfirmation = true">Finalizar compra</button>
+            </li>
         </ul>
     </section>
-    
+    @if(startConfirmation) {
+        <confirmation></confirmation>
+    }
 }

@@ -35,6 +35,21 @@ section ul {
     justify-content: space-between;
     margin-top: auto;
 }
+
+.resume:last-child button {
+    width: 100%;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: var(--border-round);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.resume:last-child button:hover {
+    background-color: var(--color-primary-hover);
+}
 @media(width >= 1024px) {
     section {
         display: grid;
