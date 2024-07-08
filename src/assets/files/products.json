@@ -4,139 +4,159 @@
         "product": "PlayStation 5",
         "price": 499.99,
         "brand": "Sony",
-        "quantity": 15
+        "quantity": 15,
+        "img": "https://atlas-content-cdn.pixelsquid.com/assets_v2/245/2452423176773178782/jpeg-600/G03.jpg?modifiedAt=1"
     },
     {
         "id": 2,
         "product": "Xbox Series X",
         "price": 499.99,
         "brand": "Microsoft",
-        "quantity": 10
+        "quantity": 10,
+        "img": "https://assets.xboxservices.com/assets/fb/d2/fbd2cb56-5c25-414d-9f46-e6a164cdf5be.png?n=XBX_A-BuyBoxBGImage01-D.png"
     },
     {
         "id": 3,
         "product": "Nintendo Switch",
         "price": 299.99,
         "brand": "Nintendo",
-        "quantity": 20
+        "quantity": 20,
+        "img": "https://static.vecteezy.com/system/resources/previews/013/007/607/non_2x/set-of-console-game-device-handheld-portable-free-png.png"
     },
     {
         "id": 4,
         "product": "PlayStation 4",
         "price": 299.99,
         "brand": "Sony",
-        "quantity": 25
+        "quantity": 25,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwG0XkR2CbYZXQYM_jw_vCudaaQfuvOu5fA&s"
     },
     {
         "id": 5,
         "product": "Xbox Series S",
         "price": 299.99,
         "brand": "Microsoft",
-        "quantity": 12
+        "quantity": 12,
+        "img": "https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
     },
     {
         "id": 6,
         "product": "Nintendo Switch Lite",
         "price": 199.99,
         "brand": "Nintendo",
-        "quantity": 18
+        "quantity": 18,
+        "img": "https://atlas-content-cdn.pixelsquid.com/assets_v2/248/2481325091011433942/jpeg-600/G03.jpg?modifiedAt=1"
     },
     {
         "id": 7,
         "product": "PlayStation 4 Pro",
         "price": 399.99,
         "brand": "Sony",
-        "quantity": 8
+        "quantity": 8,
+        "img": "https://images.tcdn.com.br/img/img_prod/1211726/playstation_4_pro_1tb_seminovo_617_1_a17d8c92dc52d4e3c393166c435a2118.png"
     },
     {
         "id": 8,
         "product": "Xbox One X",
         "price": 399.99,
         "brand": "Microsoft",
-        "quantity": 7
+        "quantity": 7,
+        "img": "https://atlas-content-cdn.pixelsquid.com/stock-images/xbox-one-x-console-game-KaE49RB-600.jpg"
     },
     {
         "id": 9,
         "product": "Nintendo Switch OLED",
         "price": 349.99,
         "brand": "Nintendo",
-        "quantity": 10
+        "quantity": 10,
+        "img": "https://bebgames.com.br/wp-content/uploads/2022/07/image-removebg-preview-42.png"
     },
     {
         "id": 10,
         "product": "Xbox One S",
         "price": 299.99,
         "brand": "Microsoft",
-        "quantity": 14
+        "quantity": 14,
+        "img": "https://assets.xboxservices.com/assets/0b/28/0b2854b9-a7e7-47dd-b4f8-a371567854b2.png?n=Xbox-Series-S_Buy-Box_0_01_829x799.png"
     },
     {
         "id": 11,
         "product": "The Last of Us Part II",
         "price": 59.99,
         "brand": "Sony",
-        "quantity": 30
+        "quantity": 30,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/9/96/The_Last_of_Us_2_capa.png"
     },
     {
         "id": 12,
         "product": "Halo Infinite",
         "price": 59.99,
         "brand": "Microsoft",
-        "quantity": 22
+        "quantity": 22,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/d/d1/Halo_Infinite_capa.png"
     },
     {
         "id": 13,
         "product": "The Legend of Zelda: Breath of the Wild",
         "price": 59.99,
         "brand": "Nintendo",
-        "quantity": 25
+        "quantity": 25,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/0/0f/Legend_of_Zelda_Breath_of_the_Wild_capa.png"
     },
     {
         "id": 14,
         "product": "Spider-Man: Miles Morales",
         "price": 49.99,
         "brand": "Sony",
-        "quantity": 18
+        "quantity": 18,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/7/74/Spider-Man_Miles_Morales_capa.png"
     },
     {
         "id": 15,
         "product": "Forza Horizon 5",
         "price": 59.99,
         "brand": "Microsoft",
-        "quantity": 20
+        "quantity": 20,
+        "img": "https://thumbnails.pcgamingwiki.com/1/13/Forza_Horizon_5_cover.jpg/300px-Forza_Horizon_5_cover.jpg"
     },
     {
         "id": 16,
         "product": "Super Mario Odyssey",
         "price": 59.99,
         "brand": "Nintendo",
-        "quantity": 24
+        "quantity": 24,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/9/99/Super_Mario_Odyssey_Capa.png"
     },
     {
         "id": 17,
         "product": "Ghost of Tsushima",
         "price": 59.99,
         "brand": "Sony",
-        "quantity": 15
+        "quantity": 15,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/d/dc/Ghost_of_Tsushima_capa.png"
     },
     {
         "id": 18,
         "product": "Gears 5",
         "price": 39.99,
         "brand": "Microsoft",
-        "quantity": 12
+        "quantity": 12,
+        "img": "https://upload.wikimedia.org/wikipedia/en/e/e4/Gears_5_cover_art.png"
     },
     {
         "id": 19,
         "product": "Animal Crossing: New Horizons",
         "price": 59.99,
         "brand": "Nintendo",
-        "quantity": 28
+        "quantity": 28,
+        "img": "https://miro.medium.com/v2/resize:fit:664/0*9eMDJlTkYOuIlDN9.png"
     },
     {
         "id": 20,
         "product": "Ratchet & Clank: Rift Apart",
         "price": 69.99,
         "brand": "Sony",
-        "quantity": 16
+        "quantity": 16,
+        "img": "https://upload.wikimedia.org/wikipedia/pt/d/d6/Ratchet_%26_Clank_Rift_Apart_capa.png"
     }
 ]
