@@ -26,10 +26,20 @@ export class CartComponent {
     this.utS$.runLoading();
   }
 
+  public handleStartConfirmation(): void {
+    this.startConfirmation = true;
+    //delay falso para fingir espera da resposta da api
+    setTimeout(() => {
+      this.cart$.confirmBuy();
+      
+    }, 1500);
+  }
+
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if(event.key === 'Escape' && this.startConfirmation) {
       this.startConfirmation = false;
+      this.cart$.confirmBuy();
     }
   }
 
@@ -41,6 +51,7 @@ export class CartComponent {
     if(target.classList.contains('overlay') && this.startConfirmation) {
       setTimeout(() => {
         this.startConfirmation = false;
+        this.cart$.confirmBuy();
       }, 2000);
     }
   }

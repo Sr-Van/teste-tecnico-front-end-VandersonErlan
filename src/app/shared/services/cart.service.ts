@@ -95,4 +95,10 @@ export class CartService {
 
   }
 
+  public confirmBuy(): void {
+    //apenas esvaziando o array do localStorage, sem nenhuma requisicao para a api. apenas como demonstracao
+    this.cartArray = [];
+    this.setCart();
+    this.setCartTotal();
+  }
 }

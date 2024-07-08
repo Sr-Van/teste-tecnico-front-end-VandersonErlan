@@ -34,7 +34,7 @@
                 <p>{{ cart$.cartTotal() | currency: 'BRL' }}</p>
             </li>
             <li>
-                <button (click)="startConfirmation = true">Finalizar compra</button>
+                <button (click)="handleStartConfirmation()">Finalizar compra</button>
             </li>
         </ul>
     </section>
