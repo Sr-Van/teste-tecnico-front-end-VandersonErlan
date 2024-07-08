@@ -74,7 +74,13 @@
     position: absolute;
     top: 5px;
     right: 3px;
-    background-color: transparent;
+    background-color: var(--color-white);
     border: none;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
     cursor: pointer;
 }
