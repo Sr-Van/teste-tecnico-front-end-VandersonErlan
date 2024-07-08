@@ -12,8 +12,12 @@
         <button (click)="addItemToCart(product)">
             <i class="bx bx-cart-add"></i>
         </button>
-        <button>
-            <i class="bx bx-heart"></i>
+        <button (click)="addToWishlist(product)" [class.isOnWish]="isItemOnWishList">
+            <i [class]="{
+                'bx': true, 
+                'bx-heart': !isItemOnWishList,
+                'bxs-heart': isItemOnWishList
+                }"></i>
         </button>
     </footer>
 </article>

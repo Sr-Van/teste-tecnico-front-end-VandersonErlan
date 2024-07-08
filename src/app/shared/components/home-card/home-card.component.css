@@ -77,6 +77,9 @@
     transition: all 300ms ease;
 }
 
+.card footer button.isOnWish {
+    background-color: var(--color-salmon) !important;
+}
 .card footer button i {
     font-size: 18px;
 }
