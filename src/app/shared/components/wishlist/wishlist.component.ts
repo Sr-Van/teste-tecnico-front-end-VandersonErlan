@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UtilService } from '../../services/util.service';
 
 @Component({
   selector: 'wishlist',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './wishlist.component.css'
 })
 export class WishlistComponent {
+
+  public utS$ = inject(UtilService);
 
 }

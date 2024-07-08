@@ -7,11 +7,14 @@ import { UtilService } from '../../shared/services/util.service';
 import { CurrencyPipe } from '@angular/common';
 import { ConfirmationComponent } from '../../shared/components/confirmation/confirmation.component';
 import { RouterModule } from '@angular/router';
+import { WishlistComponent } from '../../shared/components/wishlist/wishlist.component';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CartCardComponent, CurrencyPipe, ConfirmationComponent, RouterModule],
+  imports: [CartCardComponent, CurrencyPipe, ConfirmationComponent, RouterModule,
+    WishlistComponent
+  ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

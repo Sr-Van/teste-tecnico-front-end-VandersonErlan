@@ -1,1 +1,7 @@
-<p>wishlist works!</p>
+<ul class="wishlist">
+    @for (item of utS$.wishlist; track $index) {
+        <li class="wishlist-item">
+            <span>{{ item.product }}</span>
+        </li>
+    }
+</ul>
