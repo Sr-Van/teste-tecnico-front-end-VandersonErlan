@@ -10,6 +10,12 @@
                     [product]="item"></c-card>
                 </li>
             }
+            @empty {
+                <p style="font-size: var(--font-size-xsmall);">Carrinho vazio,
+                    <a routerLink="/home"
+                    style="cursor: pointer; text-decoration: underline;"> veja os produtos aqui.</a>
+                </p>
+            }
         </ul>
     
         <ul class="resume" [hidden]="cart$.cartArray.length === 0">

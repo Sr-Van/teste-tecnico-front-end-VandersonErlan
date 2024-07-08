@@ -18,6 +18,10 @@ section ul {
     border-radius: var(--border-round);
 }
 
+[hidden] {
+    display: none;
+}
+
 .resume-item {
     display: flex;
     gap: 10px;

@@ -6,11 +6,12 @@ import { CartCardComponent } from '../../shared/components/cart-card/cart-card.c
 import { UtilService } from '../../shared/services/util.service';
 import { CurrencyPipe } from '@angular/common';
 import { ConfirmationComponent } from '../../shared/components/confirmation/confirmation.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CartCardComponent, CurrencyPipe, ConfirmationComponent],
+  imports: [CartCardComponent, CurrencyPipe, ConfirmationComponent, RouterModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
@@ -29,6 +30,18 @@ export class CartComponent {
   handleKeyboardEvent(event: KeyboardEvent) {
     if(event.key === 'Escape' && this.startConfirmation) {
       this.startConfirmation = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleMouseEvent(event: MouseEvent) {
+    //declarando target como elemento HTML para acessar o DOM corretamente
+    const target = event.target as HTMLElement;
+
+    if(target.classList.contains('overlay') && this.startConfirmation) {
+      setTimeout(() => {
+        this.startConfirmation = false;
+      }, 2000);
     }
   }
 
