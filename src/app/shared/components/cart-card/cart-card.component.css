@@ -9,7 +9,6 @@ article {
     background-color: var(--color-white);
     gap: 10px;
 
-    max-width: 500px;
     border-bottom: 1px solid var(--color-grey);
     padding: 10px;
 }
