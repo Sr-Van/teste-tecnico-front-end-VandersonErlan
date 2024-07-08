@@ -7,24 +7,14 @@
     --color-secondary-hover: #1a7dcf;
     --color-black: #18181d;
     --color-salmon: #ff6b6b;
-    --color-black-alt: #000101;
     --color-grey: #7B7A7B;
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
     --font-family-base: "Roboto", sans-serif;
     --font-size-xsmall: .8rem;
     --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --border-round-small: 2px;
     --border-round: 4px;
-    --border-round-medium: 6px;
-    --border-round-big: 8px;
     --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26), 0 1px 2px -1px rgb(0 0 0 / 0.15);
 }
 

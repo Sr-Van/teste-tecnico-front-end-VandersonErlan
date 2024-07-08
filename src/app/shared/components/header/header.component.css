@@ -48,6 +48,7 @@ header nav .cart span {
     border-radius: 50%;
     background-color: #ca1818;
     font-size: var(--font-size-xsmall);
+    pointer-events: none;
 }
 
 header nav .cart a {

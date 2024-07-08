@@ -3,6 +3,7 @@
     <article>
         <h2>{{ product.product }}</h2>
         <p>{{ product.price | currency: 'BRL' }} (1un)</p>
+        <img [src]="product.img" [alt]="product.product">
         <div class="quantity">
             <button 
             (click)="handleDecrease()" 

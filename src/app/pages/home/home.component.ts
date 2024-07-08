@@ -57,7 +57,7 @@ export class HomeComponent {
 
     switch (this.selectValue) {
       case 0:
-        this.filteredProdArray = this.prodArray
+        this.undoSort()
         break
       case 1:
         this.sortByPriceMin()
@@ -93,5 +93,10 @@ export class HomeComponent {
   private sortByPriceMin(): void {
     this.utS$.runLoading();
     this.filteredProdArray = this.filteredProdArray.sort((a, b) => a.price - b.price)
+  }
+
+  private undoSort(): void {
+    this.utS$.runLoading();
+    this.getProds();
   }
 }

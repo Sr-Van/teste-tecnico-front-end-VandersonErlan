@@ -16,7 +16,13 @@
 .card .card-img {
     width: 250px;
     height: 250px;
+    overflow: hidden;
     box-shadow: var(--box-shadow);
+}
+
+.card .card-img img {
+    width: 100%;
+    object-fit: contain;
 }
 
 .card h2 {

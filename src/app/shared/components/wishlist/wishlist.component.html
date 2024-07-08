@@ -3,7 +3,7 @@
     @for (item of utS$.wishlist; track $index) {
         <li class="wishlist-item">
             <article class="wish-card">
-                <img src="" alt="">
+                <img [src]="item.img" [alt]="item.product" loading="lazy">
                 <button (click)="utS$.removeToWishlist(item.id)"><i class="bx bx-x"></i></button>
                 <p> {{ item.product }}</p>
                 <button (click)="addItemToCart(item)">
