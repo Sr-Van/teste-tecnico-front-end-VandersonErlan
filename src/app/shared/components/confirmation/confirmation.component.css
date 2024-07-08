@@ -21,9 +21,12 @@ section {
     gap: 20px;
     padding: 20px;
     min-width: 250px;
+    max-width: 300px;
     background-color: var(--color-white);
     border-radius: var(--border-round);
     box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    color: var(--color-black);
 }
 
 .loader {
@@ -39,6 +42,20 @@ section {
     animation: spin 600ms ease-in-out infinite;
 }
 
+.confirmed-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(--border-round);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-primary-hover);
+}
+
+.confirmed-panel i {
+    font-size: 80px;
+    color: var(--color-white);
+}
 
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }

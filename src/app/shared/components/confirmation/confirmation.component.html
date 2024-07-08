@@ -1,13 +1,17 @@
 <div class="overlay">
-    <section>
-        <p class="log">
-            {{ logMsg }}
-        </p>
+    <section [@popup]>
+        @if(!confirmedBuy) {
+            <p class="log">
+                {{ logMsg }}
+            </p>
+            <div class="loader"></div>
+        }
         @if(confirmedBuy) {
             <h4>Parabéns! Seu pedido foi realizado com sucesso!</h4>
-            <i class='bx bx-check'></i>
+            <div class="confirmed-panel">
+                <i class='bx bx-check'></i>
+            </div>
         }
-        <div class="loader"></div>
     </section>
 </div>
     
