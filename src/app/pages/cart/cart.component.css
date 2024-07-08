@@ -40,7 +40,7 @@ section ul {
     margin-top: auto;
 }
 
-.resume:last-child button {
+.resume li > button {
     width: 100%;
     border: none;
     background-color: var(--color-primary);

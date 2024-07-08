@@ -1,0 +1,74 @@
+:host {
+    grid-row: 2 span;
+    grid-column: 2 span;
+}
+.wishlist {
+    list-style: none;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 220px;
+    gap: 5px;
+    overflow-x: auto;
+}
+
+.wish-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 125px;
+    height: 150px;
+    background-color: var(--color-white);
+    border-radius: var(--border-round);
+    box-shadow: var(--box-shadow);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.wish-card button:nth-child(4) {
+    width: 115px;
+    height: 20px;
+    color: var(--color-black);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 5px;
+    cursor: pointer;
+
+    transition: all 300ms ease;
+}
+
+.wishlist li:first-child { margin-left: 5px;}
+.wishlist li:last-child { margin-right: 5px;}
+
+.wish-card img {
+    /* so para entender onde irá a imagem */
+    background-color: var(--color-grey);
+    flex: 1 1 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wish-card p {
+    font-size: var(--font-size-xsmall);
+    color: var(--color-grey);
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: fit-content;
+    margin-top: auto;
+}
+
+.wish-card button:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

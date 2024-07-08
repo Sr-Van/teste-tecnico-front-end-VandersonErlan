@@ -1,7 +1,15 @@
+<h4 style="margin-bottom: 20px;">Sua lista de desejos: </h4>
 <ul class="wishlist">
     @for (item of utS$.wishlist; track $index) {
         <li class="wishlist-item">
-            <span>{{ item.product }}</span>
+            <article class="wish-card">
+                <img src="" alt="">
+                <button (click)="utS$.removeToWishlist(item.id)"><i class="bx bx-x"></i></button>
+                <p> {{ item.product }}</p>
+                <button (click)="addItemToCart(item)">
+                    <i class="bx bx-cart-add"></i>
+                </button>
+            </article>
         </li>
     }
 </ul>
