@@ -100,5 +100,6 @@ export class CartService {
     this.cartArray = [];
     this.setCart();
     this.setCartTotal();
+    this.getCartLength();
   }
 }
