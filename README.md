@@ -18,6 +18,8 @@
 - HTML5
 - CSS3
 
+<p>Angular foi o escolhido por ser um FrameWork mais robusto e que pode entregar até para algo simples, um código mais organizado e correto. Com um código mais legível e utilizando muito bem a tipagem do TypeScript, caso seja preciso a manutenção e a possibilidade de escalar deste código é provida pelo Angular.</p>
+
 <h2 id="pages">📟 Páginas</h2>
 
 - Home
